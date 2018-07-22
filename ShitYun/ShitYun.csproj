@@ -1,0 +1,231 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{C101DBB0-02CC-4057-9E6E-D17F54886E7C}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>ShitYun</RootNamespace>
+    <AssemblyName>ShitYun</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x64\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x64'">
+    <OutputPath>bin\x64\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x86'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x86\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x86'">
+    <OutputPath>bin\x86\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>.\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="NimAudio">
+      <HintPath>.\NimAudio.dll</HintPath>
+    </Reference>
+    <Reference Include="NimCore">
+      <HintPath>.\NimCore.dll</HintPath>
+    </Reference>
+    <Reference Include="NimHttp">
+      <HintPath>.\NimHttp.dll</HintPath>
+    </Reference>
+    <Reference Include="NimUtility">
+      <HintPath>.\NimUtility.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AccountManager.cs" />
+    <Compile Include="AVChat\AVDevicesSettingForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AVChat\AVDevicesSettingForm.Designer.cs">
+      <DependentUpon>AVDevicesSettingForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ClientCallbacks.cs" />
+    <Compile Include="ConfigReader.cs" />
+    <Compile Include="DemoTrace.cs" />
+    <Compile Include="Http\DocTransForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Http\DocTransForm.Designer.cs">
+      <DependentUpon>DocTransForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Http\HttpForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Http\HttpForm.Designer.cs">
+      <DependentUpon>HttpForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="InvokeActionWrapper.cs" />
+    <Compile Include="LivingStreamSDK\LivingStreamDefine.cs" />
+    <Compile Include="LivingStreamSDK\LSClientNativeMethods.cs" />
+    <Compile Include="LivingStreamSDK\LSGlobalDef.cs" />
+    <Compile Include="LivingStreamSDK\LsManage.cs" />
+    <Compile Include="LivingStreamSDK\nimSDKHelper.cs" />
+    <Compile Include="LivingStreamSDK\YUVHelper.cs" />
+    <Compile Include="LivingStream\LivingStreamForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LivingStream\LivingStreamForm.Designer.cs">
+      <DependentUpon>LivingStreamForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LoginForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LoginForm.Designer.cs">
+      <DependentUpon>LoginForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="logOut.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="logOut.Designer.cs">
+      <DependentUpon>logOut.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MainForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainForm.Designer.cs">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Mp3Player.cs" />
+    <Compile Include="MultimediaHandler.cs" />
+    <Compile Include="ObjectOutput.cs" />
+    <Compile Include="OutputForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="OutputForm.Designer.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Tools\OutputForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Tools\OutputForm.Designer.cs">
+      <DependentUpon>OutputForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Tools\OutputInfoText.cs" />
+    <Compile Include="UserHelper.cs" />
+    <Compile Include="VChatHelper.cs" />
+    <Compile Include="VideoChatForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VideoChatForm.Designer.cs" />
+    <Compile Include="VideoFrame.cs" />
+    <EmbeddedResource Include="AVChat\AVDevicesSettingForm.resx">
+      <DependentUpon>AVDevicesSettingForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Http\DocTransForm.resx">
+      <DependentUpon>DocTransForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Http\HttpForm.resx">
+      <DependentUpon>HttpForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LivingStream\LivingStreamForm.resx">
+      <DependentUpon>LivingStreamForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LoginForm.resx">
+      <DependentUpon>LoginForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="logOut.resx">
+      <DependentUpon>logOut.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainForm.resx">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="OutputForm.resx" />
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Tools\OutputForm.resx">
+      <DependentUpon>OutputForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VideoChatForm.resx" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Connected Services\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
